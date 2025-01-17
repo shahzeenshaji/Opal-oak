@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="fsdd.xsl" type="text/xsl"?>
+<opaloak>
+  <clothes>
+    <name>Mesh beige bodycon</name>
+    <price>29.99</price>
+    <description>Stylish and comfortable, perfect for casual wear.</description>
+  </clothes>
+  <clothes>
+    <name>Black Leather Jacket</name>
+    <price>39.99</price>
+    <description>A bold and modern design for those who dare to stand out.</description>
+  </clothes>
+  <clothes>
+    <name>Black Shirt</name>
+    <price>49.99</price>
+    <description>Versatile and timeless, the perfect addition to your wardrobe.</description>
+  </clothes>
+  <clothes>
+    <name>White mesh ruffled dress</name>
+    <price>39.99</price>
+    <description>A bold and modern design for those who dare to stand out.</description>
+  </clothes>
+</opaloak>

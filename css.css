@@ -81,8 +81,11 @@ header nav ul li a {
 
 .products {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     flex-wrap: wrap;
+    width:90%;
+    margin:auto;
+    gap:15px;
 }
 
 .product-card {
@@ -90,7 +93,7 @@ header nav ul li a {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 10px;
+    margin: 5px;
     width: 250px;
     text-align: center;
 }
