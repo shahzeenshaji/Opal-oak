@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Store - Product Lookup</title>
+    <script>
+        function getProductDetails() {
+           
+            var xhr = new XMLHttpRequest();
+
+            
+            var product = document.getElementById("productInput").value;
+            var url = "get_product.php?product=" + encodeURIComponent(product);
+
+            
+            xhr.open("GET", url, true);
+
+            
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.getElementById("productResult").innerHTML = xhr.responseText;
+                }
+            };
+
+       
+            xhr.send();
+        }
+    </script>
+</head>
+<body>
+    <h2>Clothing Store - Product Lookup</h2>
+    <input type="text" id="productInput" placeholder="Enter product name">
+    <button onclick="getProductDetails()">Get Details</button>
+    <p id="productResult"></p>
+</body>
+</html>
