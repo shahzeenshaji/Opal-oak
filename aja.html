@@ -3,35 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clothing Store - Product Lookup</title>
+    <title>Opal and Oak - Product Lookup</title>
     <script>
         function getProductDetails() {
-           
             var xhr = new XMLHttpRequest();
-
-            
-            var product = document.getElementById("productInput").value;
+            var product = document.getElementById("productInput").value.trim();
             var url = "get_product.php?product=" + encodeURIComponent(product);
 
-            
             xhr.open("GET", url, true);
 
-            
             xhr.onreadystatechange = function () {
                 if (xhr.readyState === 4 && xhr.status === 200) {
-                    document.getElementById("productResult").innerHTML = xhr.responseText;
+                    document.getElementById("productResult").innerHTML = `
+                        <div class="bg-gray-100 p-4 rounded-xl shadow-md mt-4 transition-transform transform hover:scale-105">
+                            <p class="text-lg font-semibold text-gray-800">${xhr.responseText}</p>
+                        </div>
+                    `;
                 }
             };
-
-       
             xhr.send();
         }
     </script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h2>Clothing Store - Product Lookup</h2>
-    <input type="text" id="productInput" placeholder="Enter product name">
-    <button onclick="getProductDetails()">Get Details</button>
-    <p id="productResult"></p>
+<body class="bg-gray-50 flex items-center justify-center h-screen">
+    <div class="w-96 bg-white p-6 shadow-lg rounded-xl">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Product Lookup</h2>
+        <input type="text" id="productInput" placeholder="Enter product name" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-gray-400 outline-none">
+        <button onclick="getProductDetails()" class="w-full mt-3 bg-black text-white py-3 rounded-lg hover:bg-gray-800 transition">
+            Get Details
+        </button>
+        <div id="productResult"></div>
+    </div>
 </body>
 </html>
