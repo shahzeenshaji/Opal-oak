@@ -8,7 +8,7 @@
         function getProductDetails() {
             var xhr = new XMLHttpRequest();
             var product = document.getElementById("productInput").value.trim();
-            var url = "get_product.php?product=" + encodeURIComponent(product);
+            var url = "products.php?product=" + encodeURIComponent(product);
 
             xhr.open("GET", url, true);
 

@@ -1,0 +1,26 @@
+{
+    "opaloak": {
+      "clothes": [
+        {
+          "name": "Mesh beige bodycon",
+          "price": 29.99,
+          "description": "Stylish and comfortable, perfect for casual wear."
+        },
+        {
+          "name": "Black Leather Jacket",
+          "price": 39.99,
+          "description": "A bold and modern design for those who dare to stand out."
+        },
+        {
+          "name": "Black Shirt",
+          "price": 49.99,
+          "description": "Versatile and timeless, the perfect addition to your wardrobe."
+        },
+        {
+          "name": "White mesh ruffled dress",
+          "price": 39.99,
+          "description": "A bold and modern design for those who dare to stand out."
+        }
+      ]
+    }
+  }

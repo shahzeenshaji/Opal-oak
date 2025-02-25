@@ -22,11 +22,11 @@ if (isset($_GET['product'])) {
     $product = strtolower(trim($_GET['product']));
 
     if (array_key_exists($product, $products)) {
-        echo $products[$product];
+        echo json_encode(["status" => "success", "details" => $products[$product]]);
     } else {
-        echo "❌ Product not found. Try another item.";
+        echo json_encode(["status" => "error", "details" => "❌ Product not found. Try another item."]);
     }
 } else {
-    echo "⚠️ Please enter a product name.";
+    echo json_encode(["status" => "error", "details" => "⚠️ Please enter a product name."]);
 }
 ?>

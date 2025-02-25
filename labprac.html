@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas Bar Chart</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        canvas { border: 1px solid black; }
+    </style> 
+</head>
+<body>
+
+    <h2>Sales Data</h2>
+    <canvas id="chart" width="600" height="400"></canvas>
+
+    <script>
+        const canvas = document.getElementById("chart");
+        const ctx = canvas.getContext("2d");
+
+        const data = [50, 120, 180, 90, 230];
+        const labels = ["Jan", "Feb", "Mar", "Apr", "May"];
+        const maxHeight = Math.max(...data);
+
+        data.forEach((val, i) => {
+            let h = (val / maxHeight) * 300;
+            let x = i * 90 + 50, y = 350 - h;
+
+            ctx.fillStyle = "blue";
+            ctx.fillRect(x, y, 60, h);
+            ctx.fillStyle = "black";
+            ctx.fillText(labels[i], x + 15, 380);
+            ctx.fillText(val, x + 15, y - 5);
+        });
+
+        ctx.moveTo(40,20);
+        ctx.lineTo(40,350);
+        ctx.lineTo(350,40);
+        ctx.stroke();
+    </script>
+
+</body>
+</html>
