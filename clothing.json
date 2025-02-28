@@ -1,0 +1,6 @@
+[
+    { "name": "T-Shirt", "category": "Casual", "price": 15 },
+    { "name": "Jeans", "category": "Denim", "price": 40 },
+    { "name": "Jacket", "category": "Outerwear", "price": 60 },
+    { "name": "Sneakers", "category": "Footwear", "price": 50 }
+]

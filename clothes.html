@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="clothingApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Store</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-controller="ClothingController">
+    <h2>Clothing Store</h2>
+    
+    <input type="text" ng-model="searchItem" placeholder="Search clothing..." ng-focus="focused=true" ng-blur="focused=false">
+    <p ng-show="focused">Start typing to search for clothes...</p>
+    
+    <ul>
+        <li ng-repeat="item in clothing | filter:searchItem">
+            {{item.name}} - {{item.category}} - ${{item.price}}
+            <button ng-click="showDetails(item)">View Details</button>
+        </li>
+    </ul>
+    
+    <div ng-show="selectedItem">
+        <h3>Details</h3>
+        <p><strong>Name:</strong> {{selectedItem.name}}</p>
+        <p><strong>Category:</strong> {{selectedItem.category}}</p>
+        <p><strong>Price:</strong> ${{selectedItem.price}}</p>
+    </div>
+</body>
+</html>
