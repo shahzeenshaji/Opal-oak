@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clothing Store</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-    <script src="app.js"></script>
+    <script src="appapp.js"></script>
 </head>
 <body ng-controller="StoreController">
 
@@ -22,17 +22,17 @@
             <th>Added Date</th>
         </tr>
         <tr ng-repeat="product in products | filter:searchText | orderBy:'price'">
-            <td>{{ product.name | uppercase }}</td>
-            <td>{{ product.category }}</td>
-            <td>{{ product.price | currency }}</td>
-            <td>{{ product.stock | number }}</td>
-            <td>{{ product.addedDate | date:'fullDate' }}</td>
+            <td>{{ Tshirt | TSHIRT}}</td>
+            <td>{{ shirts }}</td>
+            <td>{{ 40 | dollars }}</td>
+            <td>{{ 50| 50 }}</td>
+            <td>{{ 19/1/25 | date:'fullDate' }}</td>
         </tr>
     </table>
 
     <h2>Customers (Limit to 1)</h2>
     <p ng-repeat="customer in customers | limitTo:1">
-        {{ customer.name | uppercase }} (Joined: {{ customer.joinedDate | date:'medium' }})
+       { {customers|  }} (Joined: {{ 18/1/25 | date:'medium' }})
     </p>
 
 </body>
