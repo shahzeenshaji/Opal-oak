@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="clothingStoreApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Store</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-controller="StoreController">
+
+    <h1>Clothing Store Products</h1>
+    
+    <input type="text" ng-model="searchText" placeholder="Search product...">
+    
+    <table border="1">
+        <tr>
+            <th>Product</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Added Date</th>
+        </tr>
+        <tr ng-repeat="product in products | filter:searchText | orderBy:'price'">
+            <td>{{ product.name | uppercase }}</td>
+            <td>{{ product.category }}</td>
+            <td>{{ product.price | currency }}</td>
+            <td>{{ product.stock | number }}</td>
+            <td>{{ product.addedDate | date:'fullDate' }}</td>
+        </tr>
+    </table>
+
+    <h2>Customers (Limit to 1)</h2>
+    <p ng-repeat="customer in customers | limitTo:1">
+        {{ customer.name | uppercase }} (Joined: {{ customer.joinedDate | date:'medium' }})
+    </p>
+
+</body>
+</html>
