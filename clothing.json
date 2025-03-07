@@ -1,6 +1,11 @@
-[
-    { "name": "T-Shirt", "category": "Casual", "price": 15 },
-    { "name": "Jeans", "category": "Denim", "price": 40 },
-    { "name": "Jacket", "category": "Outerwear", "price": 60 },
-    { "name": "Sneakers", "category": "Footwear", "price": 50 }
-]
+{
+    "products": [
+        { "name": "T-Shirt", "category": "Casual", "price": 15.99, "stock": 10, "addedDate": "2024-02-15T12:00:00Z" },
+        { "name": "Jeans", "category": "Denim", "price": 39.99, "stock": 5, "addedDate": "2024-02-14T12:00:00Z" },
+        { "name": "Jacket", "category": "Outerwear", "price": 79.99, "stock": 2, "addedDate": "2024-02-10T12:00:00Z" }
+    ],
+    "customers": [
+        { "name": "Alice", "joinedDate": "2024-01-20T14:30:00Z" }
+    ]
+}
+

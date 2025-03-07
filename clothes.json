@@ -15,40 +15,14 @@
         "price": 4999.5,
         "stock": 10,
         "addedDate": "2024-01-25T12:00:00Z"
-      },
-      {
-        "id": 3,
-        "name": "Graphic T-Shirt",
-        "category": "T-Shirts",
-        "price": 999.99,
-        "stock": 30,
-        "addedDate": "2024-02-15T08:30:00Z"
       }
     ],
-    "categories": ["Jackets", "Footwear", "T-Shirts", "Accessories"],
     "customers": [
       {
         "id": 101,
         "name": "Shahzeen",
         "email": "shahzeen@example.com",
         "joinedDate": "2023-12-10T09:30:00Z"
-      }
-    ],
-    "orders": [
-      {
-        "orderId": 1001,
-        "customerId": 101,
-        "productId": 1,
-        "quantity": 1,
-        "totalPrice": 2499.99,
-        "orderDate": "2024-02-18T14:00:00Z"
-      }
-    ],
-    "suppliers": [
-      {
-        "id": 201,
-        "name": "Urban Trends",
-        "location": "Bangalore"
       }
     ]
   }
